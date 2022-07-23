@@ -1,10 +1,27 @@
-//import logo from './logo.svg';
-
 import './App.css';
-import React from 'react';
+import React,{useState} from 'react';
+
 import Navbar2 from './components/navbar/index';
+import IngredientList from './components/IngredientList/IngredientList';
+import NewIngredient from './components/NewIngredient/NewIngredient';
 
 function App() {
+  
+  
+  const [ingredientArray, setNewIngredients] = useState([
+    // {id:"ing1",text:"carrot"},
+    // {id:"ing2",text:"onion"},
+    // {id:"ing3",text:"milk"},
+    // {id:"ing4",text:"beet"},
+  ]);
+
+  const addNewIngredientHandler = (newIngredient) => {
+    //setNewIngredients(ingredientArray.concat(newIngredient));
+    setNewIngredients(prevIngredientArray =>prevIngredientArray.concat(newIngredient));
+  };
+
+  
+
   return (
     <div className="App">
       <Navbar2/>
@@ -13,32 +30,18 @@ function App() {
       </div>
       <div className='title'>
         Zoodle
-      </div>  
+      </div> 
       <div className='quote'>
-        "Cutting food wate is a delicious way of saving money, helping to feed the world and protect the planet." -Tristram Stuart-
+        "Cutting food waste is a delicious way of saving money, 
+        helping to feed the world and protect the planet." -Tristram Stuart-
       </div>
-    </div>
-    
-    // <div className="App">
-    
+      <div>
+        <NewIngredient onAddIngredient={addNewIngredientHandler} />
+        <IngredientList ingredients={ingredientArray}/>
+      </div>
       
-    // <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-
-        
-    //   </header>
-    // </div>
+      
+    </div>
   );
 }
 

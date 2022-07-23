@@ -1,0 +1,50 @@
+.ingredient-input-bar{
+    position: relative;
+}
+
+.add-ingredient-button{
+    position: relative;
+    border: none;
+    color: gainsboro;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #FAF7EC;
+    border-radius: 15%;
+}
+
+.testButton{
+    position: relative;
+    border: none;
+    color: gainsboro;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #FAF7EC;
+    border-radius: 15%;
+  }
+  
+  .add-ingredient-button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .new-ingredient-form{
+    margin: 2rem;
+    text-align: center;
+    position: relative;
+  }

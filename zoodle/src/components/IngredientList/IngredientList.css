@@ -1,0 +1,13 @@
+.ingredient-list{
+    list-style: none;
+    margin: 2rem;
+    padding: 0;
+    position: relative;
+  }
+  
+  .ingredient-list li{
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+  }
